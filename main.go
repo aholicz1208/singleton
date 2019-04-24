@@ -5,7 +5,9 @@ import (
 	"sync"
 )
 
-/* 	singleton pattern : create instance once time per executed  */
+/*
+	singleton pattern : create instance once time per executed
+*/
 
 type singleton struct {}
 
@@ -19,7 +21,7 @@ func newInstance() *singleton {
 	once.Do(func() {
 		instance = &singleton{}
 	})
-	// return created instance
+	// return created instance.
 	return instance
 }
 
